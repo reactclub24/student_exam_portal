@@ -53,7 +53,7 @@ public class Signup extends GenericServlet {
 			
 			conn.close();
 			
-			out.println("Thanks for Registration");
+		
 			
 			
 		/*	out.println("FirstName is"+ fname);
