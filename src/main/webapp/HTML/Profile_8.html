@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Form</title>
+    <link rel="stylesheet" href="/CSS/Profile_8.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>User Profile Form</h1>
+        <form id="profile-form">
+            <div class="img">
+                <div>
+
+                    <div class="form-group" id="left">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" required placeholder="Enter Yor Age">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="profile-pic">Profile Picture:</label>
+                    <input type="file" id="profile-pic" name="profile-pic" accept="image/*" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required placeholder="Enter Your Phone no.">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter Your email">
+            </div>
+            <div class="form-group">
+                <label for="qualification">Recent Qualification:</label>
+                <input type="text" id="qualification" name="qualification" required
+                    placeholder="Enter Your qualification">
+            </div>
+            <div class="form-group">
+                <label for="course">Currently Enrolled Course:</label>
+                <input type="text" id="course" name="course" required placeholder="Enter Course Name">
+            </div>
+            <div class="form-group">
+                <label for="ranking">Ranking Among All Users:</label>
+                <input type="number" id="ranking" name="ranking" required placeholder="Enter Your Rank">
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <div class="location-fields">
+                    <input type="text" id="city" name="city" placeholder="City" required">
+                    <input type="text" id="state" name="state" placeholder="State" required>
+                    <input type="text" id="country" name="country" placeholder="Country" required>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("profile-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Show alert message
+            alert("Profile submitted successfully!");
+
+            // Clear input fields
+            document.getElementById("profile-form").reset();
+        });
+    </script>
+</body>
+
+</html>

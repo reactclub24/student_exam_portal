@@ -1,0 +1,278 @@
+/* * { 
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(4, 4, 4);
+}
+
+.content {
+    margin-bottom: 100px;
+}
+
+nav {
+    background-color: #B3C8CF;
+    width: 100%;
+    height: 50px;
+    padding: 50;
+    box-shadow: 0 25px 20px -20px rgb(198, 180, 223);
+    text-align: center;
+    display: flex;
+}
+
+nav ul li.first {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 180px 5px 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+    color: white;
+
+}
+
+.menu {
+    padding: 0px 0px;
+
+}
+
+nav ul li.first:hover {
+    color: rgb(8, 8, 8);
+
+}
+
+.combinequestion {
+    margin: 30px;
+    border: 3px solid black;
+    box-sizing: block;
+
+}
+
+.questions {
+    margin: 30px;
+    padding: 20px;
+    font-size: 20px;
+
+}
+
+.question1 {
+    display: flex;
+    padding: 20px;
+    font-weight: 600;
+}
+
+.number {
+    padding-right: 20px;
+    position: relative;
+}
+
+.Options {
+    display: flex;
+    position: absolute;
+    left: 110px;
+}
+
+.answer {
+    position: relative;
+    padding-left: 35px;
+    padding-right: 60px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.answer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid #221f1f;
+}
+
+.answer:hover .checkmark {
+    background-color: #a1a1e8;
+}
+
+.answer input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.answer input:checked~.checkmark:after {
+
+    display: block;
+}
+
+.checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+
+}
+
+.buttons {
+    position: relative;
+    margin-bottom: 30px;
+
+}
+
+.submit {
+    position: absolute;
+    left: 700px;
+    background-color: #B3C8CF;
+    border: none;
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: large;
+    color: #fff;
+
+}
+
+.submit:hover {
+    color: rgb(8, 8, 8);
+
+}
+    */
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Main content wrapper */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar styles */
+.Navbar {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.Navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Navbar nav ul li {
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Question container styles */
+.combinequestion {
+    margin-top: 20px;
+}
+
+.questions {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.question1 {
+    margin-bottom: 10px;
+}
+
+/* Options styles */
+.Options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.answer {
+    margin-right: 10px;
+}
+
+/* Submit button styles */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #555;
+}
+
+/* Custom radio button styles */
+input[type='radio'] {
+    display: none;
+}
+
+.checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+input[type='radio']:checked+.checkmark {
+    background-color: #333;
+}
+
+input[type='radio']:checked+.checkmark:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
